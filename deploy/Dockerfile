@@ -5,14 +5,14 @@ FROM python:3.9-slim-buster
 WORKDIR /app
 
 # Copy requirements file
-COPY requirements.txt .
+COPY deploy/requirements.txt .
 
 # Install dependencies
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy code
-COPY serve_model.py .
-COPY model.joblib .
+COPY deploy/serve_model.py .
+COPY models/model.joblib .
 
 # Expose port
 EXPOSE 8080
