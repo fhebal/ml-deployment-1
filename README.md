@@ -18,6 +18,5 @@
 docker run -p 8080:8080 ml-deployment-dev
 
 
-
 # Test predictions
 curl -d '{"Age": 28, "Fare": 7.8958, "Sex": "female", "Embarked": "S"}' -H "Content-Type: application/json" -X POST http://localhost:8080/predict
