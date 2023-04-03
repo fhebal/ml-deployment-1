@@ -1,5 +1,5 @@
 # Features
-* **Logging:** Enable Flask logging to facilitate log aggregation and querying
+* **Logging:** Enable Flask logging to facilitate log aggregation and querying. Note that logging will be enabled by default in the development environment, but you may want to modify the logging configuration in the `deployment.yaml` file to suit your needs. For the staging and production environments, it's recommended to use different logging configurations, which can be specified in separate deployment files.
 * **Storage:** Store predictions with a case number for later outcome joining
 * **MLFlow:** Track experiments using MLFlow to easily reproduce results
 * **Testing:** Implement both unit and integration testing to ensure model correctness

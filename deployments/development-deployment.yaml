@@ -1,24 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: my-deployment
+  name: ml-deployment-1-dev
 spec:
   selector:
     matchLabels:
-      app: my-app
+      app: ml-deployment-1
   replicas: 1
   template:
     metadata:
       labels:
-        app: my-app
+        app: ml-deployment-1
     spec:
       containers:
-      - name: my-container
-        image: my-image:latest
+      - name: ml-deployment-1
+        image: fhebal/ml-deployment-1-dev:0.0.1
         env:
         - name: ENVIRONMENT
-          value: production
-        - name: API_KEY
-          value: 12345
+          value: development
         ports:
         - containerPort: 8080
